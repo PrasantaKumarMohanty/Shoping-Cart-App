@@ -8,6 +8,8 @@ import Cart from 'components/Cart';
 import { useProducts } from 'contexts/products-context';
 
 import * as S from './style';
+import Recruiter from 'components/Recruiter';
+import Navbar from 'components/Navbar/Navbar';
 
 function App() {
   const { isFetching, products, fetchProducts } = useProducts();
@@ -19,13 +21,13 @@ function App() {
   return (
     <S.Container>
       {isFetching && <Loader />}
-      {/* <GithubCorner /> */}
       {/* <Recruiter /> */}
+      {/* <Navbar/> */}
       <S.TwoColumnGrid>
         <S.Side>
           <Filter />
-          {/* <GithubStarButton /> */}
         </S.Side>
+        
         <S.Main>
           <S.MainHeader>
             <p>{products?.length} Product(s) found</p>

@@ -59,7 +59,7 @@ const Cart = () => {
               <S.SubPriceInstallment>
                 {total.installments ? (
                   <span>
-                    {`OR UP TO ${total.installments} x ${
+                    {`Or up to ${total.installments} x ${
                       total.currencyFormat
                     } ${formatPrice(
                       total.totalPrice / total.installments,

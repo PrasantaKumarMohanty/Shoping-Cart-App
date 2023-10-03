@@ -30,7 +30,7 @@ export const Title = styled.p`
 `;
 
 export const Desc = styled.p`
-  color: #5b5a5e;
+  color: ${({ theme }) => theme.colors.secondary};
   margin: 0;
 `;
 

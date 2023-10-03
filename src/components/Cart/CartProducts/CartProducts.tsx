@@ -1,7 +1,7 @@
-import { ICartProduct } from 'models';
-import CartProduct from './CartProduct';
+import { ICartProduct } from "models";
+import CartProduct from "./CartProduct";
 
-import * as S from './style';
+import * as S from "./style";
 
 interface IProps {
   products: ICartProduct[];
@@ -13,10 +13,15 @@ const CartProducts = ({ products }: IProps) => {
       {products?.length ? (
         products.map((p) => <CartProduct product={p} key={p.sku} />)
       ) : (
-        <S.CartProductsEmpty>
-          Add some products in the cart <br />
-          :)
-        </S.CartProductsEmpty>
+        <>
+          <S.CartProductsEmptyMsg>
+            Your Cart is empty
+          </S.CartProductsEmptyMsg>
+
+          <S.CartProductsEmptySubMsg>
+            Shop today’s deals
+          </S.CartProductsEmptySubMsg>
+        </>
       )}
     </S.Container>
   );

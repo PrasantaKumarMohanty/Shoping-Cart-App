@@ -124,7 +124,7 @@ export const HeaderTitle = styled.span`
 
 export const Sub = styled.p`
   width: 20%;
-  color: #5b5a5e;
+  color: #ffff;
   vertical-align: middle;
   display: inline-block;
 `;
@@ -132,13 +132,13 @@ export const Sub = styled.p`
 export const SubPrice = styled.div`
   width: 80%;
   text-align: right;
-  color: #5b5a5e;
+  color: ${({ theme }) => theme.colors.hoverColor};
   vertical-align: middle;
   display: inline-block;
 `;
 
 export const SubPriceValue = styled.p`
-  color: ${({ theme }) => theme.colors.secondary};
+  color: #ffff;
   font-size: 22px;
   margin: 0;
 `;
@@ -152,7 +152,7 @@ export const CheckoutButton = styled.button`
   border: 0;
   color: #ececec;
   text-transform: uppercase;
-  background-color: #0c0b10;
+  background-color: ${({ theme }) => theme.colors.secondary};
   text-align: center;
   padding: 15px 0;
   margin-top: 40px;
@@ -162,11 +162,11 @@ export const CheckoutButton = styled.button`
   transition: background-color 0.2s;
 
   &:focus-visible {
-    outline: 3px solid ${({ theme }) => theme.colors.secondary};
+    outline: 3px solid #000;
   }
 
   &:hover {
-    background-color: #000;
+    background-color: ${({ theme }) => theme.colors.hoverColor};;
   }
 `;
 
